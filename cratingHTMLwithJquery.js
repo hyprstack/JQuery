@@ -108,3 +108,51 @@ $(document).ready(function(){
         $('#text').toggleClass('highlighted'); //clicking the element changes (toggles) it from highlighted to not-highlighted and vice-versa
     });
 });
+
+
+/*
+Changing Your Style
+What if we want to fine-tune individual CSS property values, though? Remember style="height:300px; width:300px;"? jQuery makes it a snap!
+
+Because resizing elements is so common, jQuery has specific .height() and .width() functions that can be used to change
+the heights and widths of HTML elements. For instance:
+
+    $("div").height("100px");
+    $("div").width("50px");
+would give all <div>s on the page a height of 100 pixels and a width of 50 pixels.
+
+jQuery also includes a general-purpose .css() function that takes two inputs: the first is the CSS element to alter, and the second
+is the value to set it to. For example:
+
+    $("div").css("background-color","#008800");
+would give all <div>s on the page a green background color. You can modify any element's CSS attributes this way.
+*/
+
+$(document).ready(function(){
+    $('div').height("200px");
+    $('div').width("200px");
+    $('div').css("border-radius", "10px");
+});
+
+
+/*
+Modifying Content
+Finally, we can update the contents of our HTML elements—that is, the bit between the opening and closing tags—using the .html() and .val() functions.
+
+.html() can be used to set the contents of the first element match it finds. For instance,
+
+$('div').html();
+will get the HTML contents of the first div it finds, and
+
+$('div').html("I love jQuery!");
+will set the contents of the first div it finds to "I love jQuery!"
+
+.val() is used to get the value of form elements. For example,
+
+$('input:checkbox:checked').val();
+would get the value of the first checked checkbox that jQuery finds.
+*/
+
+$(document).ready(function(){
+    $('p').html("jQuery magic in action!");
+});
